@@ -19,6 +19,12 @@ public class AdminHome extends AppCompatActivity {
         patientList = findViewById(R.id.babyTodd);
         message = findViewById(R.id.message);
 
+        patientList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),AddDataActivity.class));
+            }
+        });
 
 
 

@@ -12,7 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DeiseasesActivity"></activity>
+        <activity android:name=".FitnessCenter"></activity>
+        <activity android:name=".BMRActivity" />
+        <activity android:name=".BMICalculator" />
+        <activity android:name=".AddDataActivity" />
+        <activity android:name=".DeiseasesActivity" />
         <activity android:name=".DoctorChats" />
         <activity android:name=".DoctorInbox" />
         <activity android:name="com.nadxlib.chatOption.ChatScreen" />

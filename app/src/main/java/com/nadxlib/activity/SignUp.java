@@ -103,19 +103,19 @@ public class SignUp extends AppCompatActivity {
                     documentReference.set(Dprofile).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
-                            Toast.makeText(getApplicationContext(),"Succefull", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"Successful", Toast.LENGTH_SHORT).show();
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(getApplicationContext(),"Data input Not Succefull"+e,Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"Data input Not Successful"+e,Toast.LENGTH_SHORT).show();
                         }
                     });
 
 
 
                     finish();
-                    Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), home.class);
                     // intent.putExtra(MainActivity.EMAIL,pass);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);

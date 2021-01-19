@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.nadxlib.chatOption.ChatScreen;
+import com.nadxlib.model.FitnessTIp;
 import com.smnadim21.api.SubscriptionStatusListener;
 
 public class DetailActivity extends AppCompatActivity implements SubscriptionStatusListener {
@@ -30,14 +31,11 @@ public class DetailActivity extends AppCompatActivity implements SubscriptionSta
 
 
         final String backuplink = "https://www.goal.com/en-in/team/";
-        String link_tran_news = "https://www.goal.com/en-in/transfer-news";
-
-
 
         womanHealth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),DeiseasesActivity.class));
+                startActivity(new Intent(getApplicationContext(),BMRActivity.class));
             }
         });
 
@@ -46,10 +44,11 @@ public class DetailActivity extends AppCompatActivity implements SubscriptionSta
         babyTodd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DetailActivity.this, WV.class);
-                intent.putExtra("name", babyTodd.getText().toString());
-                intent.putExtra("url", backuplink);
-                startActivity(intent);
+//                Intent intent = new Intent(DetailActivity.this, WV.class);
+//                intent.putExtra("name", babyTodd.getText().toString());
+//                intent.putExtra("url", backuplink);
+//                startActivity(intent);
+                startActivity(new Intent(getApplicationContext(),BMICalculator.class));
             }
         });
 
@@ -58,18 +57,15 @@ public class DetailActivity extends AppCompatActivity implements SubscriptionSta
         babyName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DetailActivity.this, WV.class);
-                intent.putExtra("name", babyTodd.getText().toString());
-                intent.putExtra("url", "https://www.shutterfly.com/ideas/baby-name-generator/");
-                startActivity(intent);
+                startActivity(new Intent(getApplicationContext(),DeiseasesActivity.class));
             }
         });
 
         contractDoctor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ChatScreen.class);
-                intent.putExtra("tag","users");
+                Intent intent = new Intent(getApplicationContext(), FitnessCenter.class);
+               // intent.putExtra("tag","users");
                 startActivity(intent);
             }
         });

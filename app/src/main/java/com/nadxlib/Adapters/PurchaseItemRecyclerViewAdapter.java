@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.nadxlib.activity.R;
 
+import java.util.ArrayList;
+
 import ayalma.ir.expandablerecyclerview.ExpandableRecyclerView;
 
 public class PurchaseItemRecyclerViewAdapter extends ExpandableRecyclerView.Adapter<PurchaseItemRecyclerViewAdapter.ChildViewHolder,ExpandableRecyclerView.SimpleGroupViewHolder,String,String>
@@ -16,19 +18,24 @@ public class PurchaseItemRecyclerViewAdapter extends ExpandableRecyclerView.Adap
 
     String[] dis ;
     String[] dName ;
+    ArrayList<String> titles;
+    ArrayList<String> descrip;
 
-    public PurchaseItemRecyclerViewAdapter(String[] dis) {
-        this.dis = dis;
-    }
+
 
     public PurchaseItemRecyclerViewAdapter(String[] dis, String[] dName) {
         this.dis = dis;
         this.dName = dName;
     }
 
+    public PurchaseItemRecyclerViewAdapter(ArrayList<String> titles, ArrayList<String> descrip) {
+        this.titles = titles;
+        this.descrip = descrip;
+    }
+
     @Override
     public int getGroupItemCount() {
-        return dis.length-1;
+        return titles.size()-1;
     }
 
     @Override
@@ -62,7 +69,7 @@ public class PurchaseItemRecyclerViewAdapter extends ExpandableRecyclerView.Adap
     @Override
     public void onBindGroupViewHolder(ExpandableRecyclerView.SimpleGroupViewHolder holder, int group) {
         super.onBindGroupViewHolder(holder, group);
-        holder.setText(dName[group]);
+        holder.setText(titles.get(group));
 
     }
 
@@ -70,7 +77,7 @@ public class PurchaseItemRecyclerViewAdapter extends ExpandableRecyclerView.Adap
     public void onBindChildViewHolder(ChildViewHolder holder, int group, int position)
     {
         super.onBindChildViewHolder(holder, group, position);
-        holder.name.setText(dis[group]);
+        holder.name.setText(descrip.get(group));
     }
 
     @Override

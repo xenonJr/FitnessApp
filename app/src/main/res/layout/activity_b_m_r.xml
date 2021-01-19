@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/mainBackground"
+    >
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="272dp"
+        android:layout_height="146dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/fit"
+        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="188dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Weight in lbs"
+                android:textColorHint="#B9B9B9"
+                app:boxBackgroundColor="#FFF"
+                app:boxStrokeColor="#ACACAC"
+                app:hintTextColor="@color/colorMain">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_email_edit_kt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textColor="@color/mainText" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Height in inch"
+                android:textColorHint="#B9B9B9"
+                app:boxBackgroundColor="#FFF"
+                app:boxStrokeColor="#ACACAC"
+                app:hintTextColor="@color/colorMain">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_password_edit_kt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/mainText" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Age"
+                android:textColorHint="#B9B9B9"
+                app:boxBackgroundColor="#FFF"
+                app:boxStrokeColor="#ACACAC"
+                app:hintTextColor="@color/colorMain">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/mainText" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="fill_parent"
+                android:layout_height="95dp"
+                android:layout_below="@+id/imageView"
+                android:layout_marginTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:checked="false"
+                    android:shadowColor="@color/mainText"
+                    android:text="Male"
+                    android:textColor="@color/mainText"
+                    android:textSize="25dp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:shadowColor="@color/mainText"
+                    android:text="Female"
+                    android:textColor="@color/mainText"
+                    android:textSize="25dp" />
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:text="Result : "
+                android:textColor="@color/colorMain"
+                android:textSize="30dp"></TextView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/btn_cancel_save_edit"
+                    android:layout_width="150dp"
+                    android:layout_height="58dp"
+                    android:backgroundTint="@color/mainText"
+                    android:gravity="center"
+                    android:letterSpacing="0.02"
+                    android:text="Calculate"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="25dp"
+                    app:cornerRadius="10dp"
+                    app:elevation="5dp"
+                    app:iconPadding="10dp"
+                    app:strokeColor="#808080" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
