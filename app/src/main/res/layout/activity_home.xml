@@ -31,7 +31,7 @@
                 android:background="@color/mainBackground"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
-                android:text="Mother and Baby Health Care System"
+                android:text="Fitness Calculator and tips"
                 android:textColor="@color/colorActivityBackground"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -59,7 +59,7 @@
         android:layout_width="301dp"
         android:layout_height="214dp"
         android:layout_marginTop="92dp"
-        android:src="@drawable/lod"
+        android:src="@drawable/fit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />

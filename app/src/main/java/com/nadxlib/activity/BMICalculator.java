@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class BMICalculator extends AppCompatActivity {
     EditText weight, height;
-    TextView resultt;
+    TextView resultt,r2;
     Button addData;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,12 +20,15 @@ public class BMICalculator extends AppCompatActivity {
         height = findViewById(R.id.et_password_edit_kt);
         addData = findViewById(R.id.btn_cancel_save_edit);
         resultt = findViewById(R.id.result);
+        r2 = findViewById(R.id.result2);
         addData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 calculateBmi(weight.getText().toString(), height.getText().toString());
             }
         });
+
+
 
 
 
@@ -39,6 +42,15 @@ public class BMICalculator extends AppCompatActivity {
         float w = Float.parseFloat(toString);
         float h = Float.parseFloat(toString1);
         float result = w/(h*h);
+        if(result<=18.5){
+            r2.setText("You are Underweight");
+        }else if(result==18.5 && result<24.9){
+            r2.setText("You have Normal Weight");
+        }else if(result==25 && result<29.9){
+            r2.setText("You are overweight");
+        }else {
+            r2.setText("You have obesity");
+        }
         resultt.setText("BMI Is : "+result);
     }
 }
